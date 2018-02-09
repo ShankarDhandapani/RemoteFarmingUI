@@ -1,26 +1,121 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="signup.css">
 </head>
 <body>
 <div class="body">
 <video poster="" id="bgvid" playsinline autoplay muted loop>
-<source src="https://static.videezy.com/system/resources/previews/000/004/097/original/Clip_16.mp4" type="video/mp4">
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="D:\video.mp4" type="video/webm">
+<source src="D:\video.mp4" type="video/mp4">
 </video>
 <div id="polina">
 <h1 class="hvr-grow">Smart Farm</h1>
 
-<form>
-<h1 class="hvr-grow">Sign In</h1>
-  Email Id : <input type="text" name="id" placeholder="Email Id"><br>
-<br>
-  Password: <input type="password" name="pass" placeholder="Password"><br>
-  <input type="submit" value="Submit">
-  <br><br>
-<div class="create">Create a New Account <a href=""><button class="button2">Sign UP</button></a></div>
-</form>
+<h1 class="hvr-grow">Sign Up</h1>
+  <form>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="email">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mail" name="mail" placeholder="E-mail">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="pass">Password</label>
+      </div>
+      <div class="col-75">
+        <input type="password" id="pass" name="pass" placeholder="Password">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="northamerica">NorthAmerica</option>
+          <option value="india">India</option>
+          <option value="europe">Europe</option>
+          <option value="russia">Russia</option>
+          <option value="china">China</option>
+          <option value="spain">Spain</option>
+          <option value="germany">Germany</option>
+          <option value="italy">Italy</option>
+          <option value="bulgaria">Bulgaria</option>
+          <option value="afganistan">Afganistan</option>
+
+          <option value="pakistan">Pakistan</option><option value="chicago">Chicago</option>
+          <option value="london">London</option>
+          <option value="nepal">Nepal</option>
+          <option value="bhutan">Bhutan</option><option value="japan">Japan</option><option value="hungari">Hungari</option><option value="hongkong">Hongkong</option><option value="paris">Paris</option><option value="malaysia">Malaysia</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="code">Zipcode</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="code" name="code" placeholder="Zipcode">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+      <label for="gender">Gender</label>
+    </div>
+      <div class="col-75">
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
 </div>
+
+
+
+
+
+<div class="row">
+  <div class="col-25">
+    <label for="m-no">Mobile Number</label>
+  </div>
+  <div class="col-75">
+    <input type="text" id="m-no" name="m-no" placeholder="Mobile Number">
+  </div>
+</div>
+
+
+    <div class="row">
+      <input type="submit" value="Submit" >
+    </div>
+
+  </form>
+
+</div>
+
 </body>
 </html>
