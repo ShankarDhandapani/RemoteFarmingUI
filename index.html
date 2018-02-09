@@ -6,6 +6,14 @@
 <meta name="google-signin-scope" content="profile email">
 <meta name="google-signin-client_id" content="138423541215-tegnc8b0ubjmbrce7eqpmv3mqa7pvisb.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="body">
@@ -21,12 +29,13 @@
 <br>
   Password: <input type="password" name="pass" placeholder="Password"><br>
   <input type="submit" value="Submit">
-  <br><br>
+  <br><br><hr>
 <!--<div class="create">Create a New Account <a href="php/sign_up.php"><button class="button2">Sign UP</button></a></div>-->
-
-<div>
-
-<div>
+<div class="row">
+  <div class="col-sm-12" style="text-align:center">
+    <h4> <b> Other Sign In </b> </h4>
+  </div>
+<div class="col-sm-5" style="text-align:center;align:center">
   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   <script>
     function onSignIn(googleUser) {
@@ -45,8 +54,11 @@
     };
   </script>
 </div>
+<div class="col-sm-2" style="text-align:center;align:center">
+  <h4>or</h4>
+</div>
 
-<div>
+<div class="col-sm-5" style="text-align:center;align:center">
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
