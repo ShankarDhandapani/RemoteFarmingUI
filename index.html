@@ -3,119 +3,190 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+.body {
+  margin: 0;
+  background: #000;
 }
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover:not(.active) {
-    background-color: #111;
-}
-
-.active {
-    background-color: #4CAF50;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial;
-    font-size: 17px;
-}
-
-#myVideo {
-    position: center;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 50%;
-}
-
-.content {
+video {
     position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
-    width: 100%;
-    padding: 200px;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
 }
 
-#myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
-    background: #000;
-    color: #fff;
-    cursor: pointer;
+#polina {
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+  font-size: 1.2rem;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
 }
 
-#myBtn:hover {
-    background: #ddd;
-    color: black;
+button:hover {
+   background: rgba(0,0,0,0.5);
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background;
+}
+a:hover{
+  background:rgba(0,0,0,0.9);
+}
+@media screen and (max-width: 500px) {
+  div{width:70%;}
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+.box{
+	width: 300px;
+    	border: 5px solid grey;
+    	padding: 100px 75px;
+    	margin: 10px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+input[type=text]{
+	width: 100%;
+    	padding: 8px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;}
+
+input[type=password]{
+	width: 100%;
+    	padding: 8px 20px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;}
+input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 20px;
+		cursor:pointer;
+	}
+
+.main{
+	padding: 100px 200px;
+  	background: linear-gradient(white,);
+   	color: #f1f1f1;
+	}
+.button {
+    background-color: #4CAF50;
+    border: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0px 2px;
+    height:30px;
+    weight:40px;
+    float:right;
+    cursor:pointer;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 20px;
+
+}
+.button3 {background-color: #f44336;}
+.button2 {   background: rgba(0,0,0,0.5);
+		  border-radius: 20px;
+		  font-family: 'Ubuntu', sans-serif;
+		  weight:40px;
+		  display: inline-block;
+		  cursor:pointer;
+		  color: white;}
+ body {
+	background-image:url("https://ictinternational.files.wordpress.com/2015/03/philippines-rice-field.jpg");
+	background-size:cover;
+	background-attachment:fixed;
+ }
+ h1{
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:50px;
+	text-align:center;
+
+ }
+  .create{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:15px;
+	color:white;
+
+ }
+  .hvr-grow {
+	text-align:center;
+    padding-left:30px;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+	font-size:50;
+	font-family: 'Rammetto One', cursive;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
 }
 </style>
 </head>
 <body>
-  <div>
-
-
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li style="float:right"><a class="active" href="#about">About</a></li>
-  </ul>
-  </div>
-<div>
-<video autoplay loop id="myVideo">
-  <source src="https://goo.gl/nTEkoe" type="video/mp4">
-  Your browser does not support HTML5 video.
+<div class="body">
+<video poster="" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="D:\video.mp4" type="video/webm">
+<source src="D:\video.mp4" type="video/mp4">
 </video>
+<div id="polina">
+<h1 class="hvr-grow">D-Farm</h1>
+
+<form>
+<h1 class="hvr-grow">Sign In</h1>
+  Email Id : <input type="text" name="id" placeholder="Email Id"><br>
+<br>
+  Password: <input type="password" name="pass" placeholder="Password"><br>
+  <input type="submit" value="Submit">
+  <br><br>
+<div class="create">Create a New Account : <a href=""><button class="button2">Click Here</button></a></div>
+</form>
 </div>
-
-<div class="content">
-
-  <h1>Heading</h1>
-  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.dghh<br></p>
-
-</div>
-
-<script>
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
-
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
-</script>
 
 </body>
 </html>
