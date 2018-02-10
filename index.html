@@ -1,84 +1,80 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-  <title> Smart Farm </title>
-<link rel="shortcut icon" href="a.jpg" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<meta name="google-signin-scope" content="profile email">
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="138423541215-tegnc8b0ubjmbrce7eqpmv3mqa7pvisb.apps.googleusercontent.com">
-<script>
-function onSignIn(googleUser) {
-  console.log(googleUser);
-}
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-<body>
-<div class="body">
-<video poster="" id="bgvid" playsinline autoplay muted loop>
-<source src="https://static.videezy.com/system/resources/previews/000/004/097/original/Clip_16.mp4" type="video/mp4">
-</video>
-<div id="polina">
-<h1 class="hvr-grow">Smart Farm</h1>
-
-<form>
-<h1 class="hvr-grow">Sign In</h1>
-  Email Id : <input type="text" name="id" placeholder="Email Id"><br>
-<br>
-  Password: <input type="password" name="pass" placeholder="Password"><br>
-  <input type="submit" value="Submit">
-  <br><br><hr>
-<!--<div class="create">Create a New Account <a href="php/sign_up.php"><button class="button2">Sign UP</button></a></div>-->
-<div class="row">
-  <!--<div class="col-sm-12" style="text-align:center">
-    <h4 class="hvr-grow"> <b> Other Sign In </b> </h4>
-  </div>-->
-<div class="col-sm-5" style="text-align:center;align:center">
-  <div class="g-signin2"
-   data-onsuccess="onSignIn"></div>
-  <script>
-    function onSignIn(googleUser) {
-      // Useful data for your client-side scripts:
-      var profile = googleUser.getBasicProfile();
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log('Full Name: ' + profile.getName());
-      console.log('Given Name: ' + profile.getGivenName());
-      console.log('Family Name: ' + profile.getFamilyName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
-      // The ID token you need to pass to your backend:
-      var id_token = googleUser.getAuthResponse().id_token;
-      console.log("ID Token: " + id_token);
-    };
-  </script>
-</div>
-<div class="col-sm-2" style="text-align:center;align:center">
-  <h4><b> or </b></h4>
-</div>
-
-<div class="col-sm-5" style="text-align:center;align:center">
- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=202325873837190&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
- <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
-</div>
-</div>
-</form>
-</div>
-</body>
-</html>
+ <html>
+ <head>
+   <title> Smart Farm </title>
+ <link rel="shortcut icon" href="a.jpg" type="image/x-icon">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+ <meta name="google-signin-scope" content="profile email">
+ <meta name="google-signin-client_id" content="138423541215-tegnc8b0ubjmbrce7eqpmv3mqa7pvisb.apps.googleusercontent.com">
+ <script src="https://apis.google.com/js/platform.js" async defer></script>
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+ <!-- jQuery library -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 
+ <!-- Latest compiled JavaScript -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+ <div class="body">
+ <video poster="" id="bgvid" playsinline autoplay muted loop>
+ <source src="https://static.videezy.com/system/resources/previews/000/004/097/original/Clip_16.mp4" type="video/mp4">
+ </video>
+ <div id="polina">
+ <h1 class="hvr-grow">Smart Farm</h1>
+ 
+ <form>
+ <h1 class="hvr-grow">Sign In</h1>
+   Email Id : <input type="text" name="id" placeholder="Email Id"><br>
+ <br>
+   Password: <input type="password" name="pass" placeholder="Password"><br>
+   <input type="submit" value="Submit">
+   <br><br><hr>
+ <!--<div class="create">Create a New Account <a href="php/sign_up.php"><button class="button2">Sign UP</button></a></div>-->
+ <div class="row">
+   <div class="col-sm-12" style="text-align:center">
+     <h4> <b> Other Sign In </b> </h4>
+   </div>
+ <div class="col-sm-5" style="text-align:center;align:center">
+   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+   <script>
+     function onSignIn(googleUser) {
+       // Useful data for your client-side scripts:
+       var profile = googleUser.getBasicProfile();
+       console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+       console.log('Full Name: ' + profile.getName());
+       console.log('Given Name: ' + profile.getGivenName());
+       console.log('Family Name: ' + profile.getFamilyName());
+       console.log("Image URL: " + profile.getImageUrl());
+       console.log("Email: " + profile.getEmail());
+ 
+       // The ID token you need to pass to your backend:
+       var id_token = googleUser.getAuthResponse().id_token;
+       console.log("ID Token: " + id_token);
+     };
+   </script>
+ </div>
+ <div class="col-sm-2" style="text-align:center;align:center">
+   <h4>or</h4>
+ </div>
+ 
+ <div class="col-sm-5" style="text-align:center;align:center">
+  <div id="fb-root"></div>
+ <script>(function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=202325873837190&autoLogAppEvents=1';
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script>
+ 
+- <div class="fb-login-button" data-max-rows="1" data-size="small" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
++ <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+ </div>
+ </div>
+ </form>
+ </div>
+ </body>
+ </html>
