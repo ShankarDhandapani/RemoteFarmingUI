@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,8 +7,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="138423541215-tegnc8b0ubjmbrce7eqpmv3mqa7pvisb.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="138423541215-tegnc8b0ubjmbrce7eqpmv3mqa7pvisb.apps.googleusercontent.com">
+<script>
+function onSignIn(googleUser) {
+  console.log(googleUser);
+}
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -38,7 +43,8 @@
     <h4 class="hvr-grow"> <b> Other Sign In </b> </h4>
   </div>-->
 <div class="col-sm-5" style="text-align:center;align:center">
-  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+  <div class="g-signin2"
+   data-onsuccess="onSignIn"></div>
   <script>
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
