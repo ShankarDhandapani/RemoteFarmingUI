@@ -115,6 +115,12 @@ FB.getLoginStatus(function(response) {
  
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
+   if (response.status === 'connected') {
+    // Logged into your app and Facebook.
+   self.location = "https://shankardhandapani.github.io/RemoteFarmingUI/home";
+  } else {
+    // The person is not logged into this app or we are unable to tell. 
+  }
     statusChangeCallback(response);
   });
 }
