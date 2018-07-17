@@ -70,7 +70,58 @@
    fjs.parentNode.insertBefore(js, fjs);
  }(document, 'script', 'facebook-jssdk'));</script>
  
- <div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>
+ <!--<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div>-->
+  
+  <fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '202325873837190',
+      cookie     : true,
+      xfbml      : true,
+      version    : '1.0'
+    });
+      
+   FB.login(function(response) {
+  if (response.status === 'connected') {
+    // Logged into your app and Facebook.
+   self.location = "https://shankardhandapani.github.io/RemoteFarmingUI/home";
+  } else {
+    // The person is not logged into this app or we are unable to tell. 
+  }
+});
+   
+   
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ 
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+ 
+ 
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+</script>
+  
+  
+  
  </div>
  </div>
  </form>
